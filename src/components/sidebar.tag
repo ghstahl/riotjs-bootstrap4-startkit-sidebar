@@ -1,13 +1,12 @@
 <sidebar>
-	<ul class="nav nav-sidebar">
-
-		<li each={ navItems } 
-			onclick={parent.route} 
-			class={ active : parent.routeState.view === this.view }>
-			<a>{ this.title}</a>
-		</li>
  
-	</ul>
+		<a 	each={ navItems } 
+			onclick={parent.route}
+			class={ parent.routeState.view === this.view? 'active list-group-item':'list-group-item'  } 
+			>{this.title}</a>
+	 
+</div>        
+ 
 
 <script>
 	var self = this;

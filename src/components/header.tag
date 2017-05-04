@@ -1,24 +1,31 @@
 <header>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
+      <a href="../" class="navbar-brand">Bootswatch</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">RiotJS Bootstrap StartKit</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
+    </div><!--/.navbar-header -->
+
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li>
+              <a href="https://github.com/ghstahl/riotjs-bootstrap-startkit-sidebar">github</a>
+        </li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
-	    <li each={ navItems } 
-          onclick={parent.route} 
-          class={ active : parent.routeState.view === this.view }><a>{ this.title }</a></li>
-	  </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container-fluid -->
+        <li each={ navItems } 
+          onclick={parent.route}
+          class={ active : parent.routeState.view === this.view }>
+          <a>{ this.title }</a>
+        </li>
+      </ul>
+    </div><!--/.navbar-collapse collapse -->
+  </div><!--/.container -->
 </nav>
 
 <script>

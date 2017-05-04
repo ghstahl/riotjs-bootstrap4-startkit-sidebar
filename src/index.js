@@ -1,6 +1,6 @@
-import './css/vanilla/bootstrap.css';
+import 'bootswatch/slate/bootstrap.css';
 import "./css/index.css";
-import './js/bootstrap.js';
+import 'bootstrap';
 
 import './event-helper';
 
