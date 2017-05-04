@@ -1,6 +1,6 @@
 <header>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -32,20 +32,20 @@
 
   self.on('mount', () => {
     console.log('header mount');
-    riot.control.on('header-update',self.onHeaderUpdate);
+    riot.control.on('riot-route-dispatch-ack',self.onRiotRouteDispatchAck);
   });
   self.on('unmount', () => {
     console.log('header unmount')
-    riot.control.off('header-update',self.onHeaderUpdate);
+    riot.control.off('riot-route-dispatch-ack',self.onRiotRouteDispatchAck);
   });
 
-  self.onHeaderUpdate = () =>{
-    console.log('header header-update')
+  self.onRiotRouteDispatchAck = () =>{
+    console.log('header riot-route-dispatch-ack')
     self.update()
   }
 
   self.route = (evt) => {
-    riot.route(evt.item.view)
+    riot.control.trigger('riot-route-dispatch',evt.item.view);
   };
 
 </script>

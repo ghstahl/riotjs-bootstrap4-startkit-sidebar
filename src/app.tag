@@ -1,12 +1,19 @@
 
 import './components/header.tag';
- 
+import './components/sidebar.tag';
+
 <app>
 <header></header>
-<div class="container">
-	<div id="riot-app"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <sidebar></sidebar>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <div id="riot-app"></div>
+    </div>
+  </div>
 </div>
-
 
 <script>
  	var self = this;

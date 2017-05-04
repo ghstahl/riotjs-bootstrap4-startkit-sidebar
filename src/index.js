@@ -1,5 +1,6 @@
 import './css/vanilla/bootstrap.css';
-import './js/bootstrap.js'
+import "./css/index.css";
+import './js/bootstrap.js';
 
 import './event-helper';
 
@@ -15,6 +16,10 @@ RiotControl.addStore(new ItemStore());
 
 import RiotControlDispatcherStore 	from './stores/RiotControlDispatcherStore.js';
 RiotControl.addStore(new RiotControlDispatcherStore());
+
+import RouteStore 	from './stores/RouteStore.js';
+RiotControl.addStore(new RouteStore());
+
 
 riot.mount('app');
 // put Router Last
@@ -35,7 +40,7 @@ riot.router = new Router();
 //      dispatcher forwards on the riot.EVT.finalMount.  Only one handler and only one time.
 ////////////////////////////////////////////////////////
 RiotControl.trigger('riot-dispatch',riot.EVT.finalMount,'some data');
-RiotControl.trigger('riot-dispatch','header-update');
+RiotControl.trigger('riot-dispatch','riot-route-dispatch-ack');
 
 
 
