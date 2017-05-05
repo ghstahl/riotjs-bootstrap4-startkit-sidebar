@@ -1,32 +1,27 @@
 <header>
 
-<div class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a href="../" class="navbar-brand">Bootswatch</a>
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div><!--/.navbar-header -->
 
-    <div class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li>
-              <a href="https://github.com/ghstahl/riotjs-bootstrap-startkit-sidebar">github</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li each={ navItems } 
-          onclick={parent.route}
-          class={ active : parent.routeState.view === this.view }>
-          <a>{ this.title }</a>
-        </li>
-      </ul>
-    </div><!--/.navbar-collapse collapse -->
-  </div><!--/.container -->
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Bootswatch</a>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/ghstahl/riotjs-bootstrap4-startkit-sidebar">github</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+     <li each={ navItems } 
+        class={ parent.routeState.view === this.view?'active nav-item':'nav-item' }>
+        <a class="nav-link" onclick={parent.route}>{ this.title }</a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
 
 <script>
   var self = this;

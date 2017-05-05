@@ -16,7 +16,7 @@
     "bootstrap": "^4.0.0-alpha.6",
     "bootswatch": "github:thomaspark/bootswatch#v4",
     "file-loader": "^0.11.1",
-    "jquery": "^2.2.4",
+    "jquery": "^3.2.1",
     "normalize.css": "^5.0.0",
     "npm-run-all": "^3.1.2",
     "riot": "^3.4.0",

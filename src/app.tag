@@ -5,15 +5,19 @@ import './components/sidebar.tag';
 <app>
 <header></header>
 <div class="container">
+  
+      
+
   <div class="row">
- 
-    <div class="col-sm-3 col-md-2 sidebar">
-      <div class="list-group table-of-contents">
+  <div class="col-lg-4">
+
+    <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+      <ul class="nav nav-pills flex-column">
         <sidebar></sidebar>
       </div>
     </div>
 
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
       <div id="riot-app"></div>
     </div>
   </div>
