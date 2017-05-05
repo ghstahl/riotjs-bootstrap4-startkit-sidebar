@@ -13,8 +13,8 @@
   "author": "github.com/calben",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "bootswatch": "^3.3.7",
+    "bootstrap": "^4.0.0-alpha.6",
+    "bootswatch": "github:thomaspark/bootswatch#v4",
     "file-loader": "^0.11.1",
     "jquery": "^2.2.4",
     "normalize.css": "^5.0.0",
@@ -22,11 +22,12 @@
     "riot": "^3.4.0",
     "riot-route": "^3.1.1",
     "riotcontrol": "0.0.3",
+    "tether": "^1.4.0",
     "url-loader": "^0.5.7"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/calben/riotjs-bootstrap-startkit"
+    "url": "https://github.com/ghstahl/riotjs-bootstrap4-startkit-sidebar"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.4",

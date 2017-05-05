@@ -1,7 +1,8 @@
 import 'bootswatch/slate/bootstrap.css';
 import "./css/index.css";
+import 'tether';
+import 'jquery';
 import 'bootstrap';
-
 import './event-helper';
 
 // Put RiotControl first in the startup flow
